@@ -56,32 +56,32 @@ section.active {
     </section>
     <section id='palmsunday'>
       <h3>Into the City</h3>
-<img width="100%" src=https://farm8.staticflickr.com/7475/15847228437_6a740e9cb8_n.jpg alt="H"/>
+      <img width="100%" src=https://farm8.staticflickr.com/7475/15847228437_6a740e9cb8_n.jpg alt="H"/>
       <p>Lorem.</p>
     </section>
     <section id='bethany'>
       <h3>His BFF Lazarus</h3>
-<img width="100%" src=https://farm8.staticflickr.com/7521/15780181922_e12c1dab58_n.jpg alt="H"/>
+      <img width="100%" src=https://farm8.staticflickr.com/7521/15780181922_e12c1dab58_n.jpg alt="H"/>
       <p>Lorem.</p>
     </section>
     <section id='jacobswell'>
       <h3>With the lady at the well</h3>
-<img width="100%" src=https://farm8.staticflickr.com/7504/15776735911_3e8b259681_n.jpg alt="H"/>
+      <img width="100%" src=https://farm8.staticflickr.com/7504/15776735911_3e8b259681_n.jpg alt="H"/>
       <p>Lorem.</p>
     </section>
     <section id='fishersofmen'>
       <h3>Fishers of men</h3>
-<img width="100%" src=https://farm8.staticflickr.com/7532/16031028561_662d9ae7a1_n.jpg alt="H"/>
+      <img width="100%" src=https://farm8.staticflickr.com/7532/16031028561_662d9ae7a1_n.jpg alt="H"/>
       <p>Lorem.</p>
     </section>
     <section id='gloucester'>
       <h3>Not sure what this is</h3>
-<img width="100%" src=https://farm6.staticflickr.com/5603/15593447007_c1552437ac_n.jpg alt="H"/>
+      <img width="100%" src=https://farm6.staticflickr.com/5603/15593447007_c1552437ac_n.jpg alt="H"/>
       <p>Lorem.</p>
     </section>
     <section id='caulfield-gardens'>
       <h3>The third day</h3>
-<img width="100%" src=https://farm8.staticflickr.com/7465/15592767409_24dd201446_n.jpg alt="H"/>
+      <img width="100%" src=https://farm8.staticflickr.com/7465/15592767409_24dd201446_n.jpg alt="H"/>
       <p>Lorem.</p>
     </section>
     <section id='ghost'>
@@ -89,14 +89,26 @@ section.active {
       <img width="100%" src=https://farm8.staticflickr.com/7582/15845673750_98894d729d_n.jpg alt="H"/>
       <p>Lorem.</p>
     </section>
-    <section id='charing-cross'>
+    <section id='mother'>
       <h3>With mother</h3>
-<img width="100%" src=https://farm8.staticflickr.com/7571/15845723410_d4ea6c1539_n.jpg alt="H"/>
+      <img width="100%" src=https://farm8.staticflickr.com/7571/15845723410_d4ea6c1539_n.jpg alt="H"/>
       <p>Lorem.</p>
+    <section id='loaves'>
+      <h3>Multiplication of loaves</h3>
+<img width="100%" src=https://farm8.staticflickr.com/7465/15410706954_28a85440e2_n.jpg alt="H"/>
+      <p>Jesus was followed by a large crowd when they saw him healing the sick.
+         He asked his disciples were they can buy enough food for the people.
+         Andrew came and said this boy have 5 loaves of bread and 2 fishes. 
+         Philip shouted "THAT IS NOT ENOUGH!"
+         Jesus took the loaves of bread and fishes. He gave thanks. Then, he broke it and
+         asked his disciples to distribute them to the people. Once every one is full, 
+         he asked them to gather the leftovers so nothing will be wasted. They collected 12 wicker
+         baskets filled with bread and fish. They were very surprised!</p>
+
       <small class='colophon'>
-        Stories and <a href='https://www.flickr.com/photos/esambale/sets/72157646938248864/'>sketches</a> by <a href='https://www.___'>Alexa</a>, cartography by  <a href='http://mapbox.com'>MapBox</a>, locations from Wikipedia, source at <a href='https://github.com/maning/alexastorymap'>GitHub</a>. 
-
-
+        Stories and <a href='https://www.flickr.com/photos/esambale/sets/72157646938248864/'>sketches</a> 
+        by <a href='https://www.___'>Alexa</a>, cartography by  <a href='http://mapbox.com'>MapBox</a>, 
+        locations from Wikipedia, source at <a href='https://github.com/maning/alexastorymap'>GitHub</a>. 
       </small>
     </section>
   </div>
@@ -108,6 +120,7 @@ L.mapbox.accessToken = 'pk.eyJ1Ijoic2FtYW4iLCJhIjoiS1ptdnd0VSJ9.19qza-F_vXkgpnh8
 // The important part about this data is that the 'id' property matches
 // the HTML above - that's how we figure out how to link up the
 // map and the data.
+// axxis order is x.y or lon,lat
 var places = { type: 'FeatureCollection', features: [
 { geometry: { type: "Point", coordinates: [35.2598, 32.7040] },
   properties: { id: "cover", zoom: 8 }, type: 'Feature' },
@@ -126,7 +139,9 @@ var places = { type: 'FeatureCollection', features: [
 { geometry: { type: "Point", coordinates: [35.5979, 32.8848] },
   properties: { id: "ghost" }, type: 'Feature' },
 { geometry: { type: "Point", coordinates: [35.2300, 31.7839] },
-  properties: { id: "mother" }, type: 'Feature' }
+  properties: { id: "mother" }, type: 'Feature' },
+{ geometry: { type: "Point", coordinates: [35.548611, 32.873333] },
+  properties: { id: "loaves" }, type: 'Feature' }
 ]};
 
 var map = L.mapbox.map('map', 'saman.ed44282c', {
